@@ -14,6 +14,7 @@ async function getCountry() {
         showCountry(element)
     });
 }
+
 getCountry()
 function showCountry(data) {
     const country = document.createElement("div")
@@ -69,41 +70,41 @@ toggle.addEventListener("click", () => {
     moon.classList.toggle("bi-moon")
 })
 
-const countrySingle = document.querySelector(".countrySingle")
-function showCountryDetail(data) {
-    countrySingle.classList.toggle("show")
-    countrySingle.innerHTML = `
-    <button class="back">Back</button>
-        <div class="main-single">
-            <div class="left-single">
-            <img src="${data.flag}"alt="">
-            </div>
-            <div class="right-single">
-                <h1>${data.name}</h1>
-                <div class="single-info">
-                    <div class="inside-left inner">
-                        <p><strong>Native Name:</strong> ${data.nativeName}</p>
-                        <p><strong>Population:</strong> ${data.population}</p>
-                        <p><strong>Region:</strong> ${data.rergion}</p>
-                        <p><strong>Sub-region:</strong> ${data.subregion}</p>
-                    </div>
-                    <div class="inner-right inner">
-                        <p><strong>Capital</strong> ${data.capital}</p>
-                        <p><strong>Top Level Domain</strong> ${data.topLevelDomain.map(elem => elem)}</p>
-                        <p><strong>Currencies</strong> ${data.currencies.map(elem => elem.name)}</p>
-                        <p><strong>Languages:</strong> ${data.languages.map(elem => elem.name)}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `
-    const back = countrySingle.querySelector(".back")
-    back.addEventListener("click", () => {
-        countrySingle.classList.toggle("show")
-    })
+// const countrySingle = document.querySelector(".countrySingle")
+// function showCountryDetail(data) {
+//     countrySingle.classList.toggle("show")
+//     countrySingle.innerHTML = `
+//     <button class="back">Back</button>
+//         <div class="main-single">
+//             <div class="left-single">
+//             <img src="${data.flag}"alt="">
+//             </div>
+//             <div class="right-single">
+//                 <h1>${data.name}</h1>
+//                 <div class="single-info">
+//                     <div class="inside-left inner">
+//                         <p><strong>Native Name:</strong> ${data.nativeName}</p>
+//                         <p><strong>Population:</strong> ${data.population}</p>
+//                         <p><strong>Region:</strong> ${data.rergion}</p>
+//                         <p><strong>Sub-region:</strong> ${data.subregion}</p>
+//                     </div>
+//                     <div class="inner-right inner">
+//                         <p><strong>Capital</strong> ${data.capital}</p>
+//                         <p><strong>Top Level Domain</strong> ${data.topLevelDomain.map(elem => elem)}</p>
+//                         <p><strong>Currencies</strong> ${data.currencies.map(elem => elem.name)}</p>
+//                         <p><strong>Languages:</strong> ${data.languages.map(elem => elem.name)}</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     `
+//     const back = countrySingle.querySelector(".back")
+//     back.addEventListener("click", () => {
+//         countrySingle.classList.toggle("show")
+//     })
 
-}
+// }
 
-countrySingle.addEventListener("click", () => {
-    showCountryDetail(data)
-})
+// countrySingle.addEventListener("click", () => {
+//     showCountryDetail(data)
+// })
